@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button id="btn">클릭해보세요</button>
+
+    <script>
+      const $button = document.getElementById('btn');
+      console.log($button);
+
+      const handlerMousover = () => alert('마우스 올렸네?');
+
+      $button.addEventListener('mouseover', handlerMousover);
+
+      $button.addEventListener('click', function () {
+        alert('클릭했네?');
+      });
+
+      $button.addEventListener('click', () => {
+        console.log('클릭을 했구나..');
+      });
+
+      $button.removeEventListener('mouseover', handlerMousover);
+    </script>
+  </body>
+</html>

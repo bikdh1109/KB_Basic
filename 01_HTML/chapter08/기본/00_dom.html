@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DOM 구조 파악</h1>
+
+    <div>
+      <p>이건 단락입니다.</p>
+      <ul>
+        <li>항목1</li>
+        <li>항목2</li>
+        <li>항목3</li>
+      </ul>
+    </div>
+    <!-- document 객체는 웹 페이지의 최상위 DOM 요소이다. -->
+    <script>
+      console.log(document);
+
+      const li = document.getElementsByTagName('li');
+      console.log(li);
+    </script>
+  </body>
+</html>

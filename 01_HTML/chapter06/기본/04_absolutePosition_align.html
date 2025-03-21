@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: red;
+      }
+      #container {
+        width: 500px;
+        height: 250px;
+        background-color: orange;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -250px;
+        margin-top: -125px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>요소의 중앙 배치</h1>
+    </div>
+  </body>
+</html>
+<!-- 
+position absolute
+- 요소를 가장 가까운 position이 지정된 조상요소를 기준으로 배치됨
+- 지정된 조상요소가 없으면 최상위 요소(body 요소)를 기준으로 배치됨
+-->

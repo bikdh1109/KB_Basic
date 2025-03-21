@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data = [10, 20, 30, 40, 50];
+      console.log(data.length);
+
+      for (let index = 0; index < data.length; index++) {
+        alert(data[index]);
+      }
+
+      //  for of 반복문
+      //  배열의 요소를 직접 순회
+      //  이터러블
+      for (let value of data) {
+        alert(value);
+      }
+
+      // for in 반복문
+      // 객체의 속성을 순회(배열에서는 인덱스를 순회)
+      for (let i in data) {
+        alert(data[i]);
+      }
+    </script>
+  </body>
+</html>

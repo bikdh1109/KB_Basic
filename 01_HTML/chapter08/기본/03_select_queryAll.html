@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        const $h1 = document.querySelectorAll('h1');
+        for (let i = 0; i < $h1.length; i++) {
+          $h1[i].style.color = 'orange';
+          $h1[i].style.background = 'red';
+          $h1[i].innerText = 'From JavaScript';
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+  </body>
+</html>

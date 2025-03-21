@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="alert('클릭했네?'); console.log('클릭했네?');">
+      클릭해보세요
+    </button>
+    <button onmouseover="hello('박태근');">마우스를 올려보세요</button>
+
+    <script>
+      function hello(name) {
+        alert(`${name}씨, 마우스를 올리지 마세요!`);
+      }
+
+      function onclick(event) {
+        alert('클릭했네?');
+        console.log('클릭했네?');
+      }
+    </script>
+  </body>
+</html>
