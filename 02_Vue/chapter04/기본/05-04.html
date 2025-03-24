@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파일명</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" :value="name" @input="changeName" />
+      <br />
+      이름: <span>{{name}}</span>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript">
+      const { createApp, ref } = Vue;
+
+      const app = createApp({
+        setup() {
+          const name = ref('');
+
+          const changeName = (e) => {
+            name.value = e.target.value;
+          };
+          return {
+            name,
+            changeName,
+          };
+        },
+      });
+
+      const vm = app.mount('#app');
+    </script>
+  </body>
+</html>
