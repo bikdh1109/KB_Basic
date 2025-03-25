@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파일명</title>
+    <style>
+      .changeColor {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p>1부터 100까지만 입력 가능합니다</p>
+      <label for="">점수 : </label>
+      <input type="text" v-model.number="inputNum" :class="isRange" />
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript">
+      const { createApp, ref, computed } = Vue;
+
+      const app = createApp({
+        setup() {
+          const inputNum = ref(0);
+          const isRange = computed(() => {
+            if (inputNum.value >= 0 && inputNum.value <= 100) {
+              return;
+            } else {
+              return 'changeColor';
+            }
+          });
+
+          return {
+            inputNum,
+            isRange,
+          };
+        },
+      });
+
+      const vm = app.mount('#app');
+    </script>
+  </body>
+</html>
